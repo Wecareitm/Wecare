@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.wecare.utils.Commonfunction;
+
 public class Login extends AppCompatActivity {
 
     TextView txt_forgotpassword,txt_signup;
@@ -27,6 +29,27 @@ public class Login extends AppCompatActivity {
         txt_forgotpassword=(TextView)findViewById(R.id.txt_forgotpassword);
         btn_login = (Button)findViewById(R.id.btn_login);
         txt_signup = (TextView)findViewById(R.id.txt_signup);
+
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (!Commonfunction.checkString(edt_email_mobile.getText().toString())){
+                    edt_email_mobile.setError("Please enter your email or mobile");
+                    edt_email_mobile.requestFocus();
+                    return;
+
+                }
+
+                if (!Commonfunction.checkPassword(edt_password.getText().toString())){
+                    edt_password.setError("Password should be 6 char long");
+                    edt_password.requestFocus();
+                    return;
+                }
+
+
+            }
+        });
 
 
         txt_forgotpassword.setOnClickListener(new View.OnClickListener() {
