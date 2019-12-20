@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Servicepersonsignup"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/edt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Name"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="70dp"/>
+
+    <EditText
+        android:id="@+id/edt_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Mobile"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="70dp"
+        android:hint="Email"
+        />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="40dp"
+        android:maxLength="15"/>
+
+    <EditText
+        android:id="@+id/edt_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:inputType="textPersonName"
+        android:hint="City"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="40dp"/>
+
+    <EditText
+        android:id="@+id/edt_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Address"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="40dp"
+        />
+
+
+    <EditText
+        android:id="@+id/edt_servicetype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Service Type"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginLeft="40dp"/>
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/button_shape"
+        android:text="Register" />
+
+
+</LinearLayout>
