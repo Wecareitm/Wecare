@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.wecare.utils.Commonfunction;
 import com.example.wecare.utils.Constants;
@@ -44,7 +45,7 @@ public class Servicepersonsignup extends AppCompatActivity implements DataInterf
             @Override
             public void onClick(View view) {
 
-                if (!Commonfunction.checkString(edt_name.getText().toString())){
+                if (!Commonfunction.checkString(edt_name.getText().toString())) {
                     edt_name.setError("name should consist of characters only!");
                     edt_name.requestFocus();
                     return;
@@ -86,19 +87,19 @@ public class Servicepersonsignup extends AppCompatActivity implements DataInterf
                     edt_password.requestFocus();
                     return;
                 }
-                String url = Constants.Webserive_Url + "Servicepersonalsignup.php";
+                String url = Constants.Webserive_Url + "sp_registration.php";
 
-                HashMap<String,String> params = new HashMap<>();
+                HashMap<String, String> params = new HashMap<>();
 
-                params.put("sp_name",edt_name.getText().toString() );
-                params.put("sp_mobile",edt_mobile.getText().toString());
-                params.put("sp_email",edt_email.getText().toString());
-                params.put("sp_password",edt_password.getText().toString());
-                params.put("sp_city",edt_city.getText().toString());
-                params.put("sp_address",edt_city.getText().toString());
-                params.put("sp_servicetype",edt_servicetype.getText().toString());
+                params.put("sp_name", edt_name.getText().toString());
+                params.put("sp_mobile", edt_mobile.getText().toString());
+                params.put("sp_email", edt_email.getText().toString());
+                params.put("sp_password", edt_password.getText().toString());
+                params.put("sp_city", edt_city.getText().toString());
+                params.put("sp_address", edt_city.getText().toString());
+                params.put("sp_servicetype", edt_servicetype.getText().toString());
 
-                volley.CallVolley(url,params,"Servicepersonalsignup");
+                volley.CallVolley(url, params, "sp_registration");
 
 
             }
@@ -106,9 +107,8 @@ public class Servicepersonsignup extends AppCompatActivity implements DataInterf
 
     }
 
-
     @Override
     public void getData(JSONObject jsonObject, String tag) {
-
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
 }

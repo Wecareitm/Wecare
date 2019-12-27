@@ -9,14 +9,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wecare.utils.Commonfunction;
 import com.example.wecare.utils.Constants;
+import com.example.wecare.utils.DataInterface;
 import com.example.wecare.utils.Webservice_Volley;
+
+import org.json.JSONObject;
 
 import java.util.HashMap;
 
-public class Servicepersonlogin extends AppCompatActivity {
+public class Servicepersonlogin extends AppCompatActivity implements DataInterface {
     EditText edt_email_mobile,edt_password;
     TextView txt_forgotpassword,txt_signup;
     Button btn_login;
@@ -51,22 +55,31 @@ public class Servicepersonlogin extends AppCompatActivity {
                     edt_password.requestFocus();
                     return;
                 }
-                String url = Constants.Webserive_Url + "Servicepersonalogin.php";
+                String url = Constants.Webserive_Url + "sp_login.php";
 
 
                 HashMap<String,String> params = new HashMap<>();
                 params.put("sp_email",edt_email_mobile.getText().toString());
                 params.put("sp_pass",edt_password.getText().toString());
 
-                volley.CallVolley(url,params,"Servicepersonalogin");
+                volley.CallVolley(url,params,"sp_login");
             }
 
         });
         txt_forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this, Signup.class);
+                Intent intent=new Intent(Servicepersonlogin.this, Signup.class);
                 startActivity(intent);
 
+
+            }
+        });
+
        }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+    }
 }
