@@ -6,7 +6,7 @@ package com.example.wecare.utils;
 public class Constants {
 
 
-   public static final String Webserive_Url="http://localhost/Mark3/API/";
+   public static final String Webserive_Url="http://localhost/wecare/API/";
 
 
    public static final String IMAGE_Url="http://192.168.1.3/Nutrition_Diet_App/Uploads/";
