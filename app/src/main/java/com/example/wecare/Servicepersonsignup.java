@@ -91,8 +91,8 @@ public class Servicepersonsignup extends AppCompatActivity implements DataInterf
                 HashMap<String,String> params = new HashMap<>();
 
                 params.put("sp_name",edt_name.getText().toString() );
-                params.put("sp_mobile",edt_email_mobile.getText().toString());
-                params.put("sp_email",edt_email_mobile.getText().toString());
+                params.put("sp_mobile",edt_mobile.getText().toString());
+                params.put("sp_email",edt_email.getText().toString());
                 params.put("sp_password",edt_password.getText().toString());
                 params.put("sp_city",edt_city.getText().toString());
                 params.put("sp_address",edt_city.getText().toString());
