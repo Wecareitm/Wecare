@@ -7,14 +7,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.wecare.utils.Commonfunction;
+import com.example.wecare.utils.Constants;
+import com.example.wecare.utils.DataInterface;
+import com.example.wecare.utils.Webservice_Volley;
 
-public class Signup extends AppCompatActivity {
+import org.json.JSONObject;
+
+import java.util.HashMap;
+
+public class Signup extends AppCompatActivity implements DataInterface {
     EditText edt_name,edt_mobile,edt_email,edt_password,edt_address;
     Button btn_register;
-
-
+    Webservice_Volley volley;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +33,7 @@ public class Signup extends AppCompatActivity {
         edt_password = (EditText)findViewById(R.id.edt_password);
         edt_address = (EditText)findViewById(R.id.edt_address);
         btn_register = (Button)findViewById(R.id.btn_register);
-
+        volley = new Webservice_Volley(this,this);
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,11 +59,30 @@ public class Signup extends AppCompatActivity {
                     return;
                 }
                 if (!Commonfunction.checkString(edt_address.getText().toString())){
-                    edt_address.setError("Please ener address");
+                    edt_address.setError("Please enter address");
                     edt_address.requestFocus();
                     return;
                 }
 
+
+                String url = Constants.Webserive_Url + "registration.php";
+
+                HashMap<String,String> params = new HashMap<>();
+                params.put("u_name",edt_name.getText().toString());
+                params.put("u_address",edt_address.getText().toString());
+                params.put("u_pass",edt_password.getText().toString());
+                params.put("u_email",edt_email.getText().toString());
+                params.put("u_mobile",edt_mobile.getText().toString());
+
+                volley.CallVolley(url,params,"registration");
+
+
         }
     });
-}}
+}
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+        Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+    }
+}
