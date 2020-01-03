@@ -82,4 +82,9 @@ public class Servicepersonlogin extends AppCompatActivity implements DataInterfa
     public void getData(JSONObject jsonObject, String tag) {
         Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
+
+    public void ClickOnServicepersonsignup(View view) {
+        Intent intent=new Intent(Servicepersonlogin.this, Servicepersonsignup.class);
+        startActivity(intent);
+    }
 }

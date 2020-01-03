@@ -61,5 +61,6 @@
         android:layout_marginLeft="80dp"
         android:text="New Service Personal? Signup"
         android:textSize="18dp"
-        android:textColor="@color/colorPrimary"/>
+        android:textColor="@color/colorPrimary"
+        android:onClick="ClickOnServicepersonsignup"/>
 </LinearLayout>

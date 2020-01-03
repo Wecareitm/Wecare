@@ -76,7 +76,7 @@ public class Login extends AppCompatActivity implements DataInterface {
         txt_forgotpassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Login.this, Signup.class);
+                Intent intent=new Intent(Login.this, Forgotpassword.class);
                         startActivity(intent);
 
 
@@ -88,6 +88,13 @@ public class Login extends AppCompatActivity implements DataInterface {
     public void getData(JSONObject jsonObject, String tag) {
 
         Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void ClickOnSignup(View view) {
+
+        Intent intent=new Intent(Login.this, Signup.class);
+        startActivity(intent);
 
     }
 }
