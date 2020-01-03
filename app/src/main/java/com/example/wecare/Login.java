@@ -60,7 +60,7 @@ public class Login extends AppCompatActivity implements DataInterface {
                 }
 
 
-                String url = Constants.Webserive_Url + "login.php";
+                String url = Constants.Webserive_Url + "u_login.php";
 
                 HashMap<String,String> params = new HashMap<>();
                 params.put("u_email",edt_email_mobile.getText().toString());

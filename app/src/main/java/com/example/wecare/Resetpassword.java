@@ -57,13 +57,13 @@ public class Resetpassword extends AppCompatActivity implements DataInterface {
                 }
 
 
-                String url = Constants.Webserive_Url + "sp_resetpsw.php";
+                String url = Constants.Webserive_Url + "u_resetpsw.php";
 
                 HashMap<String,String> params = new HashMap<>();
                 params.put("sp_password",edt_newpassword.getText().toString());
                 params.put("sp_id",userid);
 
-                volley.CallVolley(url,params,"sp_resetpsw");
+                volley.CallVolley(url,params,"u_resetpsw");
 
 
             }

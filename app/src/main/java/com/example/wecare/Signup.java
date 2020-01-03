@@ -65,7 +65,7 @@ public class Signup extends AppCompatActivity implements DataInterface {
                 }
 
 
-                String url = Constants.Webserive_Url + "registration.php";
+                String url = Constants.Webserive_Url + "u_Signup.php";
 
                 HashMap<String,String> params = new HashMap<>();
                 params.put("u_name",edt_name.getText().toString());
