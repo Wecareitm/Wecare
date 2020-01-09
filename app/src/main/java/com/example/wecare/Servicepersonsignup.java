@@ -96,8 +96,8 @@ public class Servicepersonsignup extends AppCompatActivity implements DataInterf
                 params.put("sp_email", edt_email.getText().toString());
                 params.put("sp_password", edt_password.getText().toString());
                 params.put("sp_city", edt_city.getText().toString());
-                params.put("sp_address", edt_city.getText().toString());
-                params.put("sp_servicetype", edt_servicetype.getText().toString());
+                params.put("sp_profile", "");
+                params.put("sp_type", edt_servicetype.getText().toString());
 
                 volley.CallVolley(url, params, "sp_registration");
 

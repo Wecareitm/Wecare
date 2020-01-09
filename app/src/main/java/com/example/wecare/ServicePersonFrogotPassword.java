@@ -48,7 +48,7 @@ public class ServicePersonFrogotPassword extends AppCompatActivity implements Da
                 String url = Constants.Webserive_Url + "sp_forgotpsw.php";
 
                 HashMap<String,String> params = new HashMap<>();
-                params.put("u_email",edt_email.getText().toString());
+                params.put("sp_email",edt_email.getText().toString());
                 volley.CallVolley(url,params,"sp_forgotpsw");
 
 
