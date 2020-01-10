@@ -15,9 +15,10 @@
         android:ems="10"
         android:inputType="textEmailAddress|phone"
         android:hint="Mobile/Email"
+        android:textSize="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_marginTop="150dp"/>
+        android:layout_marginTop="200dp"/>
 
     <EditText
         android:id="@+id/edt_password"
@@ -40,7 +41,7 @@
         android:layout_marginLeft="80dp"
         android:text="Forgot Password?"
         android:textSize="15dp"
-        android:layout_marginBottom="25dp"/>
+        android:layout_marginBottom="25dp" />
     <Button
         android:id="@+id/btn_login"
         android:layout_width="match_parent"
@@ -50,6 +51,7 @@
         android:layout_marginRight="80dp"
         android:layout_marginLeft="80dp"
         android:layout_marginBottom="50dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/button_shape"
         />
 
@@ -60,6 +62,7 @@
         android:gravity="center_horizontal"
         android:layout_marginRight="80dp"
         android:layout_marginLeft="80dp"
+        android:layout_marginTop="-30dp"
         android:text="New User ? Signup"
         android:textSize="20dp"
         android:textColor="@color/colorPrimary"
