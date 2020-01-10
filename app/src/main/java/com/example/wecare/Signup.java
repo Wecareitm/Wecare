@@ -85,4 +85,10 @@ public class Signup extends AppCompatActivity implements DataInterface {
     public void getData(JSONObject jsonObject, String tag) {
         Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
     }
+
+    public void ClickOnSignin(View view) {
+
+        finish();
+
+    }
 }
