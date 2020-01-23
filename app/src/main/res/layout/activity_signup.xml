@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="Sign Up acc"
+        android:text="Sign Up"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"
