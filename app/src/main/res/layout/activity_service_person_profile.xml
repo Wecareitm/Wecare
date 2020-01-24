@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Signup"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:padding="32dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="My Profile"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="32dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        >
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="12"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textColorHint="#474747"
+            />
+
+        <EditText
+            android:id="@+id/edt_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:inputType="phone"
+            android:hint="Mobile"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textColorHint="#474747"
+            />
+
+        <EditText
+            android:id="@+id/edt_email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:layout_marginTop="16dp"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textColorHint="#474747"
+            android:hint="Email"
+            />
+
+        <EditText
+            android:id="@+id/edt_type"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:ems="10"
+            android:layout_marginTop="16dp"
+            android:inputType="text"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textColorHint="#474747"
+            android:hint="Service Type"
+            />
+
+        <EditText
+            android:id="@+id/edt_area"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Area"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textColorHint="#474747"
+            android:maxLength="15"/>
+
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Update"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/button_shape"
+            />
+
+
+    </LinearLayout>
+</RelativeLayout>

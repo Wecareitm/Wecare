@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Feedback"></activity>
+        <activity android:name=".Request"></activity>
+        <activity android:name=".ServicePersonProfile" />
+        <activity android:name=".Feedback" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
@@ -20,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Userselection"></activity>
+        <activity android:name=".Userselection" />
         <activity android:name=".ServicePersonResetPassword" />
         <activity android:name=".ServicePersonFrogotPassword" />
         <activity android:name=".Forgotpassword" />
