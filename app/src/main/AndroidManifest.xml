@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.wecare">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Request"></activity>
-        <activity android:name=".ServicePersonProfile" />
-        <activity android:name=".Feedback" />
+        <activity android:name=".Complaint"></activity>
+        <activity android:name=".Profile" />
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
@@ -33,7 +34,5 @@
         <activity android:name=".Signup" />
         <activity android:name=".Login" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
