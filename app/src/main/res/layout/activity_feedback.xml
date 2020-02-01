@@ -34,12 +34,6 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
 
-        <RatingBar
-            android:id="@+id/ratingBar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            />
 
         <EditText
             android:id="@+id/edt_comment"
@@ -51,10 +45,15 @@
             android:inputType="textMultiLine"
             android:lines="10"
             android:gravity="top|left"
-            android:scrollbars="vertical"
+            android:scrollbars="vertical" />
 
-
+        <RatingBar
+            android:id="@+id/ratingBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
             />
+
 
         <Button
             android:id="@+id/button2"

@@ -59,7 +59,7 @@ public class Servicepersonlogin extends AppCompatActivity implements DataInterfa
 
 
                 HashMap<String,String> params = new HashMap<>();
-                params.put("sp_email",edt_email_mobile.getText().toString());
+                params.put("sp_mobile",edt_email_mobile.getText().toString());
                 params.put("sp_password",edt_password.getText().toString());
 
                 volley.CallVolley(url,params,"sp_login");
