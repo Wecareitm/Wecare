@@ -41,7 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:ems="10"
-        android:inputType="textEmailAddress|phone"
+        android:inputType="text"
         android:hint="Email ID / Mobile No"
         android:textColor="@android:color/black"
         android:textSize="16sp"
