@@ -58,11 +58,6 @@ public class Signup extends AppCompatActivity implements DataInterface {
                     edt_password.requestFocus();
                     return;
                 }
-                if (!Commonfunction.checkString(edt_address.getText().toString())){
-                    edt_address.setError("Please enter address");
-                    edt_address.requestFocus();
-                    return;
-                }
 
 
                 String url = Constants.Webserive_Url + "u_Signup.php";
