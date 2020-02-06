@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".Generate_request"/>
         <activity
             android:name=".UserHomepageActivity"
             android:label="@string/title_activity_user_homepage"
