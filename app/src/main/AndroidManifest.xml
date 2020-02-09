@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Generate_request"/>
+        <activity android:name=".Generate_request">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".UserHomepageActivity"
             android:label="@string/title_activity_user_homepage"
@@ -20,11 +26,7 @@
         <activity
             android:name=".SplashActivity"
             android:theme="@style/AppTheme.Fullscreen">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Userselection" />
         <activity android:name=".ServicePersonResetPassword" />
