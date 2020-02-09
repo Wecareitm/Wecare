@@ -89,6 +89,9 @@ public class Login extends AppCompatActivity implements DataInterface {
 
         Toast.makeText(this, jsonObject.toString(), Toast.LENGTH_SHORT).show();
 
+        Intent i = new Intent(Login.this,AreaselectionActivity.class);
+        startActivity(i);
+
     }
 
     public void ClickOnSignup(View view) {
