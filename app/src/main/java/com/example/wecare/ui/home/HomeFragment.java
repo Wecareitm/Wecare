@@ -11,25 +11,76 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.wecare.R;
+import com.example.wecare.adapter.MyListAdapter;
+import com.example.wecare.model.CategoryInfoVo;
+import com.example.wecare.utils.Constants;
+import com.example.wecare.utils.DataInterface;
+import com.example.wecare.utils.Webservice_Volley;
+import com.google.gson.Gson;
 
-public class HomeFragment extends Fragment {
+import org.json.JSONObject;
 
-    private HomeViewModel homeViewModel;
+import java.util.HashMap;
+
+public class HomeFragment extends Fragment implements DataInterface {
+
+    RecyclerView recvCategory;
+
+    Webservice_Volley volley;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel.class);
+
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
-        homeViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+
+        recvCategory = (RecyclerView)root.findViewById(R.id.recvCategory);
+        volley = new Webservice_Volley(getActivity(),this);
+
+
+        String url = Constants.Webserive_Url + "get_category.php";
+
+        HashMap<String,String> params = new HashMap<>();
+
+        volley.CallVolley(url,params,"get_category");
+
+
+
+
         return root;
+    }
+
+    @Override
+    public void getData(JSONObject jsonObject, String tag) {
+
+        try {
+
+            CategoryInfoVo categoryInfoVo = new Gson().fromJson(jsonObject.toString(),CategoryInfoVo.class);
+
+            if (categoryInfoVo != null){
+
+                if (categoryInfoVo.getResult() != null) {
+
+                    if (categoryInfoVo.getResult().size() > 0) {
+
+                        MyListAdapter adapter = new MyListAdapter(categoryInfoVo.getResult());
+                        recvCategory.setAdapter(adapter);
+
+                    }
+
+                }
+
+            }
+
+
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
     }
 }
