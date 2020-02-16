@@ -38,6 +38,8 @@ public class Generate_request extends AppCompatActivity implements DataInterface
         edt_address = (EditText)findViewById(R.id.edt_address);
         edt_service_details = (EditText)findViewById(R.id.edt_service_details);
 
+        btn_Generate_request = (Button)findViewById(R.id.btn_Generate_request);
+
         volley = new Webservice_Volley(this,this);
 
 
@@ -84,7 +86,7 @@ public class Generate_request extends AppCompatActivity implements DataInterface
                 params.put("duration", "23");
                 params.put("order_date", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
                 params.put("status", "pending");
-                params.put("service_person_id","1");
+                params.put("serviceperson_id","1");
 
                 volley.CallVolley(url,params,"generate_request");
 
